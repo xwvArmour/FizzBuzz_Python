@@ -83,9 +83,12 @@ def test_HugeBuzz():
     # Assert
     assert ans == 'Buzz'
 
-def test_HugeFizzBuzz():
+@pytest.mark.parametrize(
+    "num", range(3*5**1000, 3*5**1000 + 100, 15)
+)
+def test_HugeFizzBuzz(num):
     # Arrange
-    num = 3*5**1000 + 15
+    # from parametrize
 
     # Act
     ans = fizzbuzz(num)

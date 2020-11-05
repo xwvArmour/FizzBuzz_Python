@@ -70,7 +70,7 @@ def test_HugeNum():
     # Assert
     assert ans == str(num)
 
-def test_HugFizz():
+def test_HugeFizz():
     # Arrange
     num = 3*5**1000 + 3
 
@@ -80,7 +80,7 @@ def test_HugFizz():
     # Assert
     assert ans == 'Fizz'
 
-def test_HugBuzz():
+def test_HugeBuzz():
     # Arrange
     num = 3*5**1000 + 5
 
@@ -90,7 +90,7 @@ def test_HugBuzz():
     # Assert
     assert ans == 'Buzz'
 
-def test_HugFizzBuzz():
+def test_HugeFizzBuzz():
     # Arrange
     num = 3*5**1000 + 15
 

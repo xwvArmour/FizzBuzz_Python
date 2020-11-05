@@ -40,9 +40,19 @@ def test_FizzBuzz():
     # Assert
     assert ans == 'FizzBuzz'
 
-def test_GapNum():
+def test_NumBetween35():
     # Arrange
     num = 4
+
+    # Act
+    ans = fizzbuzz(num)
+
+    # Assert
+    assert ans == str(num)
+
+def test_NumBetween59():
+    # Arrange
+    num = 7
 
     # Act
     ans = fizzbuzz(num)

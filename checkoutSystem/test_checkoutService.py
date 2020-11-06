@@ -41,10 +41,12 @@ def test_Checkout_MemberWithBalanceDue_ThrowsException():
 
 def test_Checkout_BookNotAvailable_ThrowsException():
     book.isUnavailable = True
+    member.outstandingBalance = 0
     with pytest.raises(BookUnavilableError):
         checkoutService.checkout(member, book)
 
 def test_Checkout_OnSuccess_BookRemovedFromInventory():
+    book.isUnavailable = False
     bookInventory.removeBook = Mock()
     checkoutService.checkout(member, book)
     bookInventory.removeBook.assert_called_with(book)

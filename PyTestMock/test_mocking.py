@@ -11,7 +11,7 @@ def getData():
 
 def test_getData(mocker):
     mocker.patch(
-        'test_mocking_.apiCall',
+        'test_mocking.apiCall',
         return_value = 2
     )
     expected = 2
